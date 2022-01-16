@@ -1,0 +1,302 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  background-color: white;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
+  transition: all linear .2s;
+
+  .navbar-collapse {
+    display: inline-block;
+    width: 100%;
+  }
+
+  a.nav-link {
+    @include on-event() {
+      color: $serpent;
+    }
+  }
+
+  .top-header,
+  .bottom-header,
+  img {
+    transition: all linear .3s;
+  }
+
+  .navbar {
+    display: inline-block;
+    width: 100%;
+
+    .lg-container {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .top-header {
+    padding: 4px 16px;
+
+    background-color: $mascow-mule;
+
+    .navbar-nav {
+      .top-header-text {
+        padding-left: 11px;
+        padding-right: 11px;
+      }
+    }
+  }
+
+  .cart-link {
+    line-height: 1;
+  }
+
+  .cart {
+    display: flex;
+    align-items: center;
+    padding: 7px 11px;
+    margin-left: 38px;
+
+    background-color: $white;
+    border-radius: 3px;
+
+    img {
+      margin-right: 9px;
+    }
+
+    .top-header-text {
+      margin-right: 21px;
+    }
+  }
+
+  .bottom-header {
+    padding: 14px 16px;
+    height: 103px;
+
+    .navbar-collapse {
+      flex-grow: inherit;
+    }
+
+    .navbar-nav {
+      & > li {
+        margin: 0 15px;
+      }
+    }
+
+    .nav-link {
+      color: $charcoal;
+      font-family: $font-roboto-bold;
+      font-size: 14px;
+
+      &.sf-with-ul {
+        padding-right: 23px;
+      }
+
+      &.view-all {
+        color: $serpent;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .bottom-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+
+  .sub-menu {
+    .nav-link{
+      font-family: $font-roboto-regular;
+    }
+  }
+
+  .navbar-brand {
+    img {
+      width: 159px;
+    }
+  }
+
+  .form-inline {
+    position: relative;
+    margin-left: 23px;
+
+    .form-control {
+      padding: 7px 10px;
+      padding-left: 42px;
+
+      font-size: 13px;
+
+      border-radius: 3px;
+    }
+
+    .btn {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      padding: 0 12px;
+
+      background-color: transparent;
+      border: none;
+
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@include respond-to(md-up) {
+  &.on-scroll {
+    top: -42px;
+
+    .top-header {
+      transform: scaleY(0);
+      transform-origin: top;
+    }
+
+    .bottom-header {
+      height: 75px;
+    }
+
+    .navbar-brand {
+      img {
+        width: 90px;
+      }
+    }
+
+    .sf-menu {
+      ul {
+        top: 59px;
+      }
+    } 
+  }
+}
+
+@include respond-to(md-down) {
+  header {
+    .top-header {
+      .navbar-nav {
+        .top-header-text {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+      }
+    }
+
+    .navbar-brand {
+      img {
+        width: 120px;  
+      }
+    }
+
+    .bottom-header {
+      height: 87px;
+
+      .navbar-nav {
+        & > li {
+          margin: 0 11px;
+        }
+      }
+    }
+
+    .sf-menu {
+      ul {
+        top: 65px;
+      }
+    }
+
+    .form-inline {
+      margin-left: 0;
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  header {
+    padding: 15px;
+
+    & > .navbar-brand {
+      float: left;
+
+      img {
+        width: 105px;
+      }
+    }
+
+    .navbar-toggler {
+      margin-top: 6px;
+      float: right;
+    }
+
+    .navbar-collapse {
+      display: none;
+    }
+
+    .navbar {
+      .lg-container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .top-header {
+      .lg-container {
+        flex-direction: column-reverse;
+      }
+
+      .nav-item:not(:last-child) {
+        border-bottom: 1px #fff solid;
+      }
+    }
+
+    .cart {
+      justify-content: center;
+      margin: 9px 0;
+      width: 100%;
+    }
+
+    .bottom-header {
+      height: auto;
+    }
+
+    .navbar-nav,
+    .form-inline {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+
+    .bottom-menu {
+      flex-wrap: wrap;
+    }
+
+    .sf-menu {
+      ul {
+        position: relative;
+        top: 0;
+      }
+    }
+
+    .sub-menu {
+      box-shadow: none;
+
+      li {
+        padding: 0 15px;
+      }
+    }
+
+    .form-inline {
+      .btn {
+        margin: 0 !important;
+      }
+    }
+  }
+}

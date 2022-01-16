@@ -1,0 +1,15 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the welcome of the site/application.
+// -----------------------------------------------------------------------------
+
+.section-welcome {
+  padding: 29px 15px;
+  
+  text-align: center;
+
+  .link {
+    text-decoration: underline;
+  }
+}

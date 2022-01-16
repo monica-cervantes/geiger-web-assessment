@@ -1,0 +1,43 @@
+//main: ../main.scss
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+.section-title {
+  color: $biscay;
+  font-family: $font-alegreya;
+  font-size: 31px;
+}
+
+.paragraph {
+  margin: auto;
+  margin-bottom: 7px;
+  max-width: 556px;
+
+  color: $charcoal;
+  font-family: $font-roboto-regular;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.apparel-title {
+  color: $white;
+
+  font-family: $font-roboto-bold;
+  font-size: 40px;
+  text-shadow: 0 9px 15px rgb(0, 0, 0);
+}
+
+.top-header-text {
+  margin-bottom: 0;
+
+  color: $charcoal;
+  font-family: $font-roboto-regular;
+  font-size: 13px;
+  line-height: 1;
+}

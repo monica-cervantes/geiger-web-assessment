@@ -1,0 +1,12 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@include font-face($font-opensans, $base-url + 'fonts/', 'opensans-regular', 'opensans-regular');
+@include font-face($font-alegreya, $base-url + 'fonts/', 'alegreya-extrabold', 'alegreya-extrabold');
+@include font-face($font-roboto-regular, $base-url + 'fonts/', 'roboto-regular', 'roboto-regular');
+@include font-face($font-roboto-bold, $base-url + 'fonts/', 'roboto-bold', 'roboto-bold');
+
+

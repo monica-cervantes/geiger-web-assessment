@@ -1,0 +1,55 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the banner of the site/application.
+// -----------------------------------------------------------------------------
+
+.section-banner {
+  display: flex;
+  align-items: center;
+  padding: 50px 15px;
+  min-height: 405px;
+  
+  text-align: center;
+  
+  background-image: url(../../assets/images/art-images/spot-background.jpg);
+  background-position: center 70%;
+  background-size: cover;
+
+  .container {
+    align-items: center;
+  }
+
+  .main-banner {
+    padding: 27px 15px;
+    margin: auto;
+    width: 100%;
+    
+    background-color: rgba(48, 59, 80, .8);
+    border-top-left-radius: 51px;
+    border-bottom-right-radius: 51px;
+  }
+
+  .banner-logo {
+    margin-bottom: 19px;
+    width: 248px;
+  }
+  
+  .spot-title,
+  .spot-sub-title {
+    color: $white;
+    font-family: $font-alegreya;
+    text-shadow: 0 2px 3px rgb(8, 8, 8);
+  }
+
+  .spot-title {
+    font-size: 50px;
+  }
+
+  .spot-sub-title {
+    margin-bottom: 0;
+
+    font-size: 39px;
+  }
+}
+

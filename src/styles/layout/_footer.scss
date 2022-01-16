@@ -1,0 +1,88 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+footer {
+  background: url(../../assets/images/art-images/footer-pattern.png), $sayward-pine;
+
+  .c-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+  }
+  
+  .footer-links {
+    display: flex;
+    margin-bottom: 0;
+    
+    list-style: none;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+  
+  .footer-item {
+    margin-bottom: 0;
+    font-family: $font-roboto-regular;
+    font-size: 13px;
+    color: $white;
+  }
+}
+
+@include respond-to(md-down) {
+  footer {
+    .c-row {
+      padding: 20px 0;
+    }
+
+    .footer-item {
+      font-size: 12px;
+    }
+
+    .footer-links {
+      padding-left: 5px;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+          margin-right: 9px;
+        }
+      }
+    }
+  } 
+} 
+
+@include respond-to(sm-down) {
+  footer {
+    .c-row {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+
+    .footer-links {
+      flex-wrap: wrap;
+      padding-left: 0;
+      margin-bottom: 25px;
+
+      li {
+        justify-content: center;
+        flex: 0 0 50%;
+        margin-bottom: 5px;
+        width: 50%;
+
+        &:not(:last-child) {
+          display: flex;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
